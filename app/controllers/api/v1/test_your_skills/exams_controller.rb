@@ -26,4 +26,30 @@ class Api::V1::TestYourSkills::ExamsController < Api::V1::BaseController
       parameter_errors
     end
   end
+  
+  def random_questions
+    user = User.find_by_id(params[:uid])
+    if params[:uid]
+      if params[:eid]
+        obj = Exam.find_by_id(params[:eid])
+      elsif params[:sid]
+        obj = Subject.find_by_id(params[:sid])
+      elsif params[:tid]
+        obj = Topic.find_by_id(params[:tid])
+      elsif params[:cid]
+        obj = Chapter.find_by_id(params[:cid])
+      end
+      if obj
+        questions_list = obj.questions
+      else
+        questions_list = Question.unattempted_questions(params[:uid])
+      end
+      if questions_list.blank?
+        questions_list = Question.skipped_questions(params[:uid])
+      end
+      render json: { result: { messages: "success", rstatus: 1, errorcode: 200 },data: questions_list.as_json(except: [:created_at, :updated_at], include: { answers: { except: [:question_id,:created_at,:updated_at] } } )}
+    else
+      parameter_errors
+    end
+  end
 end
