@@ -1,4 +1,5 @@
 class Subject < ApplicationRecord
+   belongs_to :exam
    has_many :topics
-  belongs_to :exam
+   has_many :questions,through: :topics
 end

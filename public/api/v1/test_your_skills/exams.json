@@ -1,0 +1,34 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "",
+  "resourcePath": "exams",
+  "apis": [
+    {
+      "path": "/api/test_your_skills/answer_one_question",
+      "operations": [
+        {
+          "summary": "Fetches all group memberships",
+          "parameters": [
+
+          ],
+          "responseMessages": [
+            {
+              "code": 401,
+              "responseModel": null,
+              "message": "Unauthorized"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "Not Acceptable"
+            }
+          ],
+          "nickname": "Api::V1::TestYourSkills::Exams#answer_one_question",
+          "method": "get"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

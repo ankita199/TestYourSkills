@@ -45,6 +45,15 @@ ActiveRecord::Schema.define(version: 2019_06_15_043230) do
     t.index ["chapter_id"], name: "index_questions_on_chapter_id"
   end
 
+  create_table "questions_answers_users", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "answer_id"
+    t.bigint "question_id"
+    t.bigint "user_id"
+    t.index ["answer_id"], name: "index_questions_answers_users_on_answer_id"
+    t.index ["question_id"], name: "index_questions_answers_users_on_question_id"
+    t.index ["user_id"], name: "index_questions_answers_users_on_user_id"
+  end
+
   create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "exam_id"
     t.string "name"
