@@ -5,27 +5,27 @@
   "resourcePath": "exams",
   "apis": [
     {
-      "path": "/api/test_your_skills/exams/answer_particular_question",
+      "path": "/api/test_your_skills/exams/answer_particular_question.json",
       "operations": [
         {
           "summary": "Answer Particular Question",
           "parameters": [
             {
-              "paramType": "query",
-              "name": "uid",
-              "type": "string",
-              "description": "User Id",
-              "required": true
-            },
-            {
-              "paramType": "query",
+              "paramType": "form",
               "name": "qid",
               "type": "string",
               "description": "Question Id",
               "required": true
             },
             {
-              "paramType": "query",
+              "paramType": "form",
+              "name": "uid",
+              "type": "string",
+              "description": "User Id",
+              "required": true
+            },
+            {
+              "paramType": "form",
               "name": "aid",
               "type": "string",
               "description": "Answer id",
@@ -55,41 +55,41 @@
       ]
     },
     {
-      "path": "/api/test_your_skills/exams/random_questions",
+      "path": "/api/test_your_skills/exams/random_questions.json",
       "operations": [
         {
           "summary": "Get Random Questions",
           "parameters": [
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "uid",
               "type": "string",
               "description": "User Id",
               "required": true
             },
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "eid",
               "type": "string",
               "description": "Exam Id",
               "required": false
             },
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "sid",
               "type": "string",
               "description": "Subject Id",
               "required": false
             },
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "tid",
               "type": "string",
               "description": "Topic Id",
               "required": false
             },
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "cid",
               "type": "string",
               "description": "Chapter Id",
@@ -119,41 +119,41 @@
       ]
     },
     {
-      "path": "/api/test_your_skills/exams/result",
+      "path": "/api/test_your_skills/exams/result.json",
       "operations": [
         {
           "summary": "Get Result",
           "parameters": [
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "uid",
               "type": "string",
               "description": "User Id",
               "required": true
             },
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "eid",
               "type": "string",
               "description": "Exam Id",
               "required": false
             },
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "sid",
               "type": "string",
               "description": "Subject Id",
               "required": false
             },
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "tid",
               "type": "string",
               "description": "Topic Id",
               "required": false
             },
             {
-              "paramType": "query",
+              "paramType": "form",
               "name": "cid",
               "type": "string",
               "description": "Chapter Id",

@@ -1,5 +1,6 @@
 class Api::V1::BaseController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :bad_record
+  include Swagger::Docs::Methods
 
   protected
 

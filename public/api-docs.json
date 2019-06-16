@@ -1,11 +1,11 @@
 {
   "apiVersion": "1.0",
   "swaggerVersion": "1.2",
-  "basePath": "/",
+  "basePath": "http:/localhost:3000",
   "apis": [
     {
-      "path": "api/v1/test_your_skills/answer_one_question.{format}",
-      "description": "Exam[answer_one_question]"
+      "path": "/api/v1/test_your_skills/exams.{format}",
+      "description": "Exam[answer_particular_question/random_questions/result]"
     }
   ],
   "authorizations": null
