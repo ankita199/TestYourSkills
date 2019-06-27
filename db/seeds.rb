@@ -52,19 +52,17 @@ Topic.find_by_name("Coded-inequality").chapters.create(name: "Problem-Solving By
 
 
 Chapter.find_by_name("Solving Equations").questions.create(content: "What is the point of intersection of the lines: x + 2y = 4 and -x - 3y = -7?",category: 0)
-Chapter.find_by_name("Solving Equations").questions.create(content: "Factor the expression 10x2 + 20x - 80",category: 1)
-Chapter.find_by_name("Solving Equations").questions.create(content: "Solve |2x - 4| - 2 = 6",category: 2)
+Chapter.find_by_name("Solving Equations").questions.create(content: "Factor the expression 10x2 + 20x - 80",category: 0)
+Chapter.find_by_name("Solving Equations").questions.create(content: "Solve |2x - 4| - 2 = 6",category: 0)
 Chapter.find_by_name("Relation puzzle").questions.create(content: "If (i) M is the brother of N; (ii) B is the brother of N; (iii) M is the brother of D, then which of the following statements is definitely true?",category: 0)
 Chapter.find_by_name("Relation puzzle").questions.create(content: "Rahul`s mother is the only daughter of Monika`s father. How is Monika`s husband related to Rahul ?",category: 1)
-Chapter.find_by_name("Relation puzzle").questions.create(content: "Deepak is brother of Ravi. Rekha is sister of Atul. Ravi is son of Rekha. How is Deepak related to Rekha ?",category: 2)
-Chapter.find_by_name("Coded relations").questions.create(content: "If DELHI is coded as 73541 and CALCUTTA as 82589662, how can CALICUT be coded ?",category: 0)
+Chapter.find_by_name("Relation puzzle").questions.create(content: "Deepak is brother of Ravi. Rekha is sister of Atul. Ravi is son of Rekha. How is Deepak related to Rekha ?",category: 1)
+Chapter.find_by_name("Coded relations").questions.create(content: "If DELHI is coded as 73541 and CALCUTTA as 82589662, how can CALICUT be coded ?",category: 1)
 Chapter.find_by_name("Coded relations").questions.create(content: "In a certain code, RIPPLE is written as 613382 and LIFE is written as 8192. How is PILLER written in that code ?",category: 1)
-Chapter.find_by_name("Coded relations").questions.create(content: "",category: 2)
-Chapter.find_by_name("Problem-Solving By Substitution").questions.create(content: "If × stands for 'addition', ÷ stands for 'subtraction', + stands for 'multiplication' and - stands for 'division', then 20 × 8 ÷ 8 - 4 + 2 = ?",category: 0)
+Chapter.find_by_name("Problem-Solving By Substitution").questions.create(content: "If × stands for 'addition', ÷ stands for 'subtraction', + stands for 'multiplication' and - stands for 'division', then 20 × 8 ÷ 8 - 4 + 2 = ?",category: 2)
 Chapter.find_by_name("Problem-Solving By Substitution").questions.create(content: "If - means ×, × means +, + means ÷ and ÷ means -, then 40 × 12 + 3 - 6 ÷ 60 = ?",category: 2)
-Chapter.find_by_name("Problem-Solving By Substitution").questions.create(content: "If + means ×, ÷ means -, × means ÷ and - means +, what will be the value of 4 + 11 ÷ 5 - 55 = ?",category: 1)
+Chapter.find_by_name("Problem-Solving By Substitution").questions.create(content: "If + means ×, ÷ means -, × means ÷ and - means +, what will be the value of 4 + 11 ÷ 5 - 55 = ?",category: 2)
 Chapter.find_by_name("Problem-Solving By Substitution").questions.create(content: "If + means ÷, × means -, ÷ means × and - means+, than 8 + 6 × 4 ÷ 3 - 4 = ?",category: 2)
-
 Chapter.find_by_name("Problem-Solving By Substitution").questions.create(content: "If × means ÷, - means ×, ÷ means + and + means-, than (3 - 15 ÷ 19) × 8 + 6 = ?",category: 2)
 
 

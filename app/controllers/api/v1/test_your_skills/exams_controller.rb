@@ -66,16 +66,12 @@ class Api::V1::TestYourSkills::ExamsController < Api::V1::BaseController
         elsif params[:cid]
           obj = Chapter.find_by_id(params[:cid])
         end
-        if obj
-          questions_list = obj.questions.unattempted_questions(params[:uid])
-        else
-          questions_list = Question.unattempted_questions(params[:uid])
-        end
+        questions_list = Question.unattempted_questions(obj,user)
         if questions_list.blank?
           questions_list = Question.skipped_questions(params[:uid])
         end
         render json: { result: { messages: "success", rstatus: 1, errorcode: 200 },data: questions_list.as_json(except: [:created_at, :updated_at], include: { answers: { except: [:question_id,:created_at,:updated_at] } } )}
-      end        
+      end
     else
       parameter_errors
     end
@@ -110,7 +106,7 @@ class Api::V1::TestYourSkills::ExamsController < Api::V1::BaseController
         all_questions = obj.questions
         all_questions_count = all_questions.count
         attempted_count = (all_questions.attempted_questions(params[:uid]).count)
-        unseen_percentage = ((all_questions.unattempted_questions(params[:uid]).count) / all_questions_count.to_f) * 100
+        unseen_percentage = ((all_questions.unattempted_questions(user).count) / all_questions_count.to_f) * 100
         skipped_percentage = ((all_questions.skipped_questions(params[:uid]).count) / all_questions_count.to_f) * 100
         attempted_answers  = user.attempted_answers
         wrong_ans_percentage = ((attempted_answers.wrong_answers.count) / attempted_answers.count.to_f)  * 100

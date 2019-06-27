@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_15_043230) do
+ActiveRecord::Schema.define(version: 2019_06_26_053155) do
 
   create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "question_id"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 2019_06_15_043230) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "level", default: 0
   end
 
   add_foreign_key "answers", "questions"
